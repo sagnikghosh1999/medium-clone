@@ -10,9 +10,6 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useRouter } from "next/router";
-import { Post } from "../typing";
-import { sanityClient } from "../sanity";
-import firebase from "firebase/compat";
 
 export function Context({ children }) {
   const router = useRouter();
@@ -35,7 +32,7 @@ export function Context({ children }) {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((res) => {
-        router.reload();
+        // router.reload();
       })
       .catch((err) => {
         console.log(err);
@@ -53,7 +50,7 @@ export function Context({ children }) {
     };
   }, []);
   async function logout() {
-    router.reload();
+    // router.reload();
     await signOut(auth);
   }
   // sign up & sign in
@@ -110,7 +107,7 @@ export function Context({ children }) {
       );
       setsuccesslogin(true);
 
-      router.reload();
+      // router.reload();
     } catch (error) {
       if (
         error.code === "auth/invalid-email" ||

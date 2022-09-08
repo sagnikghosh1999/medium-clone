@@ -18,7 +18,7 @@ function Search({ posts }: Props) {
 
   const router = useRouter();
   return (
-    <div className="mt-[90px]  font-poppins">
+    <div className="mt-[20px]  font-poppins">
       <Header />
       <div className="mx-10">
         <div className="w-[100%]  m-auto py-10 relative">
