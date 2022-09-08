@@ -287,6 +287,7 @@ function Post({ post, posts }: Props) {
       <Head>
         <title>{post.title}</title>
         <meta name="description" content={post.description} />
+        <link rel="icon" href="/images/medium.png" />
       </Head>
       <main className="font-poppins grid grid-cols-7 ">
         {/* First section */}
